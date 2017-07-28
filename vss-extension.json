@@ -1,0 +1,103 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-extension-form-field-viewhtml",
+    "version": "0.1.2",
+    "name": "View Html Control",
+    "scopes": [ "vso.work", "vso.work_write" ],
+    "description": "Add uma <div> in form using value of field.",
+    "publisher": "marcelocabralghilardi",
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "Work Items",
+        "Extensions",
+        "Work Item Control",
+        "view html",
+        "Samples"
+    ],
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        },
+        "getstarted": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        },
+        "learn": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        },
+        "support": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        },
+        "repository": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        },
+        "issues": {
+            "uri": "https://github.com/kabrau/vsts-extension-form-field-viewhtml"
+        }
+    },
+    "branding": {
+        "color": "rgb(220, 235, 252)",
+        "theme": "light"
+    },
+    "files": [
+        {
+            "path": "img",
+            "addressable": true
+        },
+        {
+            "path": "build",
+            "addressable": true
+        },
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "css",
+            "addressable": true
+        }
+    ],
+    "categories": [
+        "Plan and track"
+    ],
+    "contributions": [
+        {
+            "id": "viewhtml-form-control",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "description": "A work item form control to show a html.",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "View Html control",
+                "uri": "index.html",
+                "height": 50,
+				"inputs": [
+				    {
+                        "id":"FieldName",
+                        "name": "Select the field for this control. Use a hidden field",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["String", "PlainText","Integer", "HTML"]
+                        },
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": true
+                        }
+                    }            
+				]
+            }
+        }
+    ]
+}
