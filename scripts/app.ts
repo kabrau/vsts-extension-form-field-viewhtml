@@ -22,6 +22,7 @@ VSS.register(VSS.getContribution().id, function () {
                                 service.getFieldValues([_fieldName]).then(
                                 function (value) {
                                     var textLink = value[_fieldName] ;
+                                    $("#content").empty();
                                     $("#content").append($("<div/>").append("" + textLink));
                                 });
                             },
